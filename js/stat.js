@@ -19,19 +19,15 @@ var twoArraysSort = function (arrNum, arrStr) {
       }
     }
   }
-  return arrNum;
-  return arrStr;
 };
 
 // поиск максимального значения в массиве
 var maxArrayValue = function (arr) {
 var max = -1;
-var maxIndex = -1;
 for (var i = 0; i < arr.length; i++) {
   var arrMax = arr[i];
   if (max < arrMax) {
     max = arrMax;
-    maxIndex = i;
     }
   }
   return max;
@@ -81,13 +77,7 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.font = '16px PT Mono';
   ctx.fillText('Ура вы победили!\nСписок результатов:', 170, 35);
 
-  console.log(times);
-  console.log(names);
   twoArraysSort(times, names);
-  console.log(times);
-  console.log(names);
-
-  console.log(maxArrayValue(times));
 
   var maxTime = maxArrayValue(times);
 
